@@ -1,6 +1,7 @@
 # Generate question based on Paragraph or PDF using AI Gen-AI
 
-![image](https://github.com/aspoorna24/-Generate-question-based-on-Paragraph-or-PDF-using-AI-Gen-AI/assets/69906063/8bf482cb-74ac-41b5-8029-d3b4178946e5)
+![image](https://github.com/aspoorna24/MCQ-Generation/assets/69906063/02cafa2e-0f98-4d82-9301-66e6ab6e6ca2)
+
 
 Business Value
 - Educational Self Assessment
