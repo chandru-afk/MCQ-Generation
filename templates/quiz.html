@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+ 
+<div class="col-sm-8 p-3">
+ 
+  <div class="box-element p-5 ">
+<h2>Choose the Correct Answer</h2>
+<h6 style="float:right">
+<i class="fa fa-hourglass-half"
+          style="font-size:20px;color:gray"> </i><i id="effect" style="margin-left:10px;"> 00:00:00 </i>
+</h6>
+<br>
+ 
+<hr style="color:blue">
+<div style="height:500px;overflow-y:scroll">
+<form action="/quiz" , method="POST" enctype="multipart/form-data">
+  <ol>
+   
+    {%for i in range(0, len)%}
+    <br>
+    <li><h5>{{question[i]}}</h5></li>
+ 
+    {% for key in option[i] %}
+ 
+    <input name="{{i}}" type="radio" value="{{key}}" / required>{{ option[i][key] }}
+    <br/>
+    {% endfor %} {%endfor%}
+  </ol>
+  <input  type="submit" class="btn btn-primary" value="Submit"></button>
+ 
+</form>
+</div>
+</div>
+</div>
+ 
+<script>
+  var m = 0, s = 0, h = 0;
+function ab() {
+          s++;
+          document.getElementById('effect').innerHTML = h + ":" + m + ":" + s;
+          if (s == 59) {
+            s = 0;
+            m++;
+          }
+          if (m == 59) {
+            m = 0;
+            h++;
+          }
+          setTimeout(ab, 1000);
+        }
+        ab();
+      </script>
+{% endblock %}

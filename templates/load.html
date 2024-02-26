@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col-sm-8 p-3">
+<div id="loader" class="center"></div>
+
+</div>
+<!--
+<div  class="col-sm-8 p-3 d-flex align-items-center justify-content-center">
+    <div>
+<div class="spinner-border text-primary" role="status" style="width: 4rem; height: 4rem;">
+  </div>
+</div>
+</div>
+-->
+<script>
+    document.onreadystatechange = function () {
+        if (document.readyState !== "complete") {
+            document.querySelector(
+                "body").style.visibility = "hidden";
+            document.querySelector(
+                "#loader").style.visibility = "visible";
+        } else {
+            document.querySelector(
+                "#loader").style.display = "none";
+            document.querySelector(
+                "body").style.visibility = "visible";
+        }
+    };
+</script>
+  {% endblock %}
+
